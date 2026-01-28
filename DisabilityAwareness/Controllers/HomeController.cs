@@ -18,6 +18,31 @@ namespace DisabilityAwareness.Controllers
             return View();
         }
 
+        public IActionResult Types()
+        {
+            return View();
+        }
+
+        public IActionResult Services()
+        {
+            return View();
+        }
+
+        public IActionResult Resources()
+        {
+            return View();
+        }
+
+        public IActionResult Inclusion()
+        {
+            return View();
+        }
+
+        public IActionResult Accessibility()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

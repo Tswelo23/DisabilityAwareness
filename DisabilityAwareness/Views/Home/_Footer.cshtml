@@ -1,0 +1,44 @@
+﻿<footer>
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4 mb-4">
+                <h4 style="font-size: 1.5rem;">DisabilityAware</h4>
+                <p style="color: rgba(255, 255, 255, 0.7); line-height: 1.7;">
+                    An educational platform dedicated to promoting disability awareness, inclusion, and accessible resources for all.
+                </p>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h5>Quick Links</h5>
+                <div class="d-flex flex-column gap-2">
+                    <a asp-controller="Home" asp-action="Index">Home</a>
+                    <a asp-controller="Home" asp-action="Types">Disability Types</a>
+                    <a asp-controller="Home" asp-action="Services">Support Services</a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h5>Resources</h5>
+                <div class="d-flex flex-column gap-2">
+                    <a asp-controller="Home" asp-action="Resources">Learning Materials</a>
+                    <a asp-controller="Home" asp-action="Inclusion">Inclusion Guide</a>
+                    <a asp-controller="Home" asp-action="Accessibility">Accessibility Tools</a>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <h5>Stay Informed</h5>
+                <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; margin-bottom: 16px;">
+                    Subscribe to our newsletter for updates on disability awareness and inclusion resources.
+                </p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email address" aria-label="Email" id="newsletterEmail">
+                    <button type="button" id="subscribeBtn">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <hr style="border-color: rgba(255, 255, 255, 0.1); margin: 40px 0 30px;">
+        <div class="text-center">
+            <p style="color: rgba(255, 255, 255, 0.6); margin: 0;">
+                © @DateTime.Now.Year - DisabilityAware - <a asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </p>
+        </div>
+    </div>
+</footer>

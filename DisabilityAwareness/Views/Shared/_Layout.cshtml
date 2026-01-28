@@ -7,40 +7,121 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/DisabilityAwareness.styles.css" asp-append-version="true" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">DisabilityAwareness</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <!-- Accessibility Toolbar -->
+    <div class="accessibility-toolbar">
+        <button id="font-increase" aria-label="Increase text size" title="Increase text size">
+            <i class="fas fa-search-plus"></i>
+        </button>
+        <button id="font-decrease" aria-label="Decrease text size" title="Decrease text size">
+            <i class="fas fa-search-minus"></i>
+        </button>
+        <button id="high-contrast" aria-label="Toggle high contrast mode" title="High contrast mode">
+            <i class="fas fa-adjust"></i>
+        </button>
+        <button id="read-aloud" aria-label="Enable text-to-speech" title="Read aloud">
+            <i class="fas fa-volume-up"></i>
+        </button>
+        <button id="stop-speech" aria-label="Stop speech" title="Stop speech" style="display: none;">
+            <i class="fas fa-stop"></i>
+        </button>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
-            &copy; 2026 - DisabilityAwareness - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                DisabilityAware
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString() == "Index" ? "active" : "")"
+                           asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString() == "Types" ? "active" : "")"
+                           asp-controller="Home" asp-action="Types">Disability Types</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString() == "Services" ? "active" : "")"
+                           asp-controller="Home" asp-action="Services">Support Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString() == "Resources" ? "active" : "")"
+                           asp-controller="Home" asp-action="Resources">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString() == "Inclusion" ? "active" : "")"
+                           asp-controller="Home" asp-action="Inclusion">Inclusion Guide</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString() == "Privacy" ? "active" : "")"
+                           asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 mb-4">
+                    <h4 style="font-size: 1.5rem;">DisabilityAware</h4>
+                    <p style="color: rgba(255, 255, 255, 0.7); line-height: 1.7;">
+                        An educational platform dedicated to promoting disability awareness, inclusion, and accessible resources for all.
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <div class="d-flex flex-column gap-2">
+                        <a asp-controller="Home" asp-action="Index">Home</a>
+                        <a asp-controller="Home" asp-action="Types">Disability Types</a>
+                        <a asp-controller="Home" asp-action="Services">Support Services</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Resources</h5>
+                    <div class="d-flex flex-column gap-2">
+                        <a asp-controller="Home" asp-action="Resources">Learning Materials</a>
+                        <a asp-controller="Home" asp-action="Inclusion">Inclusion Guide</a>
+                        <a asp-controller="Home" asp-action="Accessibility">Accessibility Tools</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Stay Informed</h5>
+                    <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; margin-bottom: 16px;">
+                        Subscribe to our newsletter for updates on disability awareness and inclusion resources.
+                    </p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email address" aria-label="Email" id="newsletterEmail">
+                        <button type="button" id="subscribeBtn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255, 255, 255, 0.1); margin: 40px 0 30px;">
+            <div class="text-center">
+                <p style="color: rgba(255, 255, 255, 0.6); margin: 0;">
+                    © @DateTime.Now.Year - DisabilityAware - <a asp-controller="Home" asp-action="Privacy">Privacy</a>
+                </p>
+            </div>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

@@ -1,0 +1,55 @@
+﻿<!-- Accessibility Toolbar -->
+<div class="accessibility-toolbar">
+    <button id="font-increase" title="Increase text size">
+        <i class="fas fa-search-plus"></i> Larger
+    </button>
+    <button id="font-decrease" title="Decrease text size">
+        <i class="fas fa-search-minus"></i> Smaller
+    </button>
+    <button id="high-contrast" title="High contrast mode">
+        <i class="fas fa-adjust"></i> Contrast
+    </button>
+    <button id="read-aloud" title="Read page content">
+        <i class="fas fa-volume-up"></i> Read
+    </button>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+        <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+            DisabilityAware
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString() == "Index" && ViewContext.RouteData.Values["Controller"]?.ToString() == "Home" ? "active" : "")"
+                       asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString() == "Types" ? "active" : "")"
+                       asp-controller="Home" asp-action="Types">Disability Types</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString() == "Services" ? "active" : "")"
+                       asp-controller="Home" asp-action="Services">Support Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString() == "Resources" ? "active" : "")"
+                       asp-controller="Home" asp-action="Resources">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString() == "Inclusion" ? "active" : "")"
+                       asp-controller="Home" asp-action="Inclusion">Inclusion Guide</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString() == "Privacy" ? "active" : "")"
+                       asp-controller="Home" asp-action="Privacy">Privacy</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
