@@ -1,8 +1,309 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home - Disability Awareness";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-10 mx-auto text-center hero-content">
+                <h1>
+                    Understanding Disabilities,<br>
+                    <span class="highlight">Building Inclusion</span>
+                </h1>
+                <p class="lead">
+                    An educational platform dedicated to raising awareness about different disabilities,
+                    promoting inclusion, and sharing resources that empower communities.
+                </p>
+                <div class="d-flex flex-wrap justify-content-center gap-3 hero-buttons">
+                    <a href="#learn-section" class="btn-modern btn-primary-gradient">
+                        <i class="fas fa-book-open"></i>
+                        Start Learning
+                    </a>
+                    <a asp-controller="Home" asp-action="Resources" class="btn-modern btn-outline-modern">
+                        <i class="fas fa-hands-helping"></i>
+                        Explore Resources
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Educational Cards Section -->
+<section id="learn-section" class="py-5 bg-white">
+    <div class="container py-5">
+        <div class="section-header">
+            <h2>Types of Disabilities & Support Services</h2>
+            <p>Learn about different disabilities and the services that help create inclusive environments</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Visual Disabilities -->
+            <div class="col-md-6 col-lg-4">
+                <div class="edu-card">
+                    <div class="edu-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="edu-title">Visual Disabilities</h3>
+                    <p class="edu-desc">
+                        Understanding blindness, low vision, and the assistive technologies that help.
+                    </p>
+                    <div class="resources-list">
+                        <h6>Helpful Services</h6>
+                        <ul>
+                            <li>Braille transcription services</li>
+                            <li>Screen reader software</li>
+                            <li>Accessible document creation</li>
+                            <li>Orientation training</li>
+                        </ul>
+                    </div>
+                    <a asp-controller="Home" asp-action="Types" asp-fragment="visual" class="edu-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hearing Disabilities -->
+            <div class="col-md-6 col-lg-4">
+                <div class="edu-card">
+                    <div class="edu-icon">
+                        <i class="fas fa-deaf"></i>
+                    </div>
+                    <h3 class="edu-title">Hearing Disabilities</h3>
+                    <p class="edu-desc">
+                        Learning about deafness, hearing loss, and communication support systems.
+                    </p>
+                    <div class="resources-list">
+                        <h6>Helpful Services</h6>
+                        <ul>
+                            <li>Sign language interpretation</li>
+                            <li>Real-time captioning (CART)</li>
+                            <li>Assistive listening devices</li>
+                            <li>Deaf culture training</li>
+                        </ul>
+                    </div>
+                    <a asp-controller="Home" asp-action="Types" asp-fragment="hearing" class="edu-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobility Disabilities -->
+            <div class="col-md-6 col-lg-4">
+                <div class="edu-card">
+                    <div class="edu-icon">
+                        <i class="fas fa-wheelchair"></i>
+                    </div>
+                    <h3 class="edu-title">Mobility Disabilities</h3>
+                    <p class="edu-desc">
+                        Understanding physical disabilities and accessibility solutions.
+                    </p>
+                    <div class="resources-list">
+                        <h6>Helpful Services</h6>
+                        <ul>
+                            <li>Accessibility consulting</li>
+                            <li>Assistive technology</li>
+                            <li>Adaptive equipment</li>
+                            <li>Universal design</li>
+                        </ul>
+                    </div>
+                    <a asp-controller="Home" asp-action="Types" asp-fragment="mobility" class="edu-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Neurodiversity -->
+            <div class="col-md-6 col-lg-4">
+                <div class="edu-card">
+                    <div class="edu-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="edu-title">Neurodiversity</h3>
+                    <p class="edu-desc">
+                        Exploring autism, ADHD, dyslexia and supportive approaches.
+                    </p>
+                    <div class="resources-list">
+                        <h6>Helpful Services</h6>
+                        <ul>
+                            <li>Sensory-friendly design</li>
+                            <li>Executive function coaching</li>
+                            <li>Alternative assessments</li>
+                            <li>Awareness training</li>
+                        </ul>
+                    </div>
+                    <a asp-controller="Home" asp-action="Types" asp-fragment="neurodiversity" class="edu-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Cognitive Disabilities -->
+            <div class="col-md-6 col-lg-4">
+                <div class="edu-card">
+                    <div class="edu-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="edu-title">Cognitive Disabilities</h3>
+                    <p class="edu-desc">
+                        Understanding intellectual disabilities and learning differences.
+                    </p>
+                    <div class="resources-list">
+                        <h6>Helpful Services</h6>
+                        <ul>
+                            <li>Easy-read documents</li>
+                            <li>Cognitive assistive tech</li>
+                            <li>Supported programs</li>
+                            <li>Skills workshops</li>
+                        </ul>
+                    </div>
+                    <a asp-controller="Home" asp-action="Types" asp-fragment="cognitive" class="edu-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mental Health -->
+            <div class="col-md-6 col-lg-4">
+                <div class="edu-card">
+                    <div class="edu-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="edu-title">Mental Health</h3>
+                    <p class="edu-desc">
+                        Learning about mental health conditions and supportive environments.
+                    </p>
+                    <div class="resources-list">
+                        <h6>Helpful Services</h6>
+                        <ul>
+                            <li>Mental health first aid</li>
+                            <li>Wellness programs</li>
+                            <li>Flexible arrangements</li>
+                            <li>Support resources</li>
+                        </ul>
+                    </div>
+                    <a asp-controller="Home" asp-action="Types" asp-fragment="mental-health" class="edu-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Facts Section -->
+<section class="py-5" style="background: var(--light);">
+    <div class="container py-5">
+        <div class="section-header">
+            <h2>Understanding Disability Statistics</h2>
+            <p>Key facts that highlight the importance of disability awareness</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="fact-card">
+                    <div class="fact-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <div class="fact-number">15%</div>
+                    <p>of the world's population lives with some form of disability</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="fact-card">
+                    <div class="fact-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="fact-number">80%</div>
+                    <p>of disabilities are acquired during working years (ages 18-64)</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="fact-card">
+                    <div class="fact-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="fact-number">90%</div>
+                    <p>of websites are not fully accessible to people with disabilities</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="fact-card">
+                    <div class="fact-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="fact-number">3x</div>
+                    <p>Companies with inclusive hiring have 3x higher revenue growth</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How to Support Section -->
+<section class="py-5 support-section">
+    <div class="container py-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <h2 class="display-6 fw-bold mb-4">Creating Accessible Environments</h2>
+                <p class="mb-4" style="color: var(--gray); font-size: 1.1rem;">
+                    Accessibility isn't just about ramps and elevators. It's about creating environments
+                    where everyone can participate fully and independently.
+                </p>
+
+                <div class="check-item">
+                    <div class="check-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div>
+                        <strong style="color: var(--dark); display: block; margin-bottom: 4px;">Universal Design</strong>
+                        <span style="color: var(--gray); font-size: 0.95rem;">Creating products and environments usable by all people</span>
+                    </div>
+                </div>
+
+                <div class="check-item">
+                    <div class="check-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div>
+                        <strong style="color: var(--dark); display: block; margin-bottom: 4px;">Reasonable Accommodations</strong>
+                        <span style="color: var(--gray); font-size: 0.95rem;">Modifications that enable full participation</span>
+                    </div>
+                </div>
+
+                <div class="check-item">
+                    <div class="check-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div>
+                        <strong style="color: var(--dark); display: block; margin-bottom: 4px;">Digital Accessibility</strong>
+                        <span style="color: var(--gray); font-size: 0.95rem;">Making websites and apps usable for everyone</span>
+                    </div>
+                </div>
+
+                <div class="check-item">
+                    <div class="check-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div>
+                        <strong style="color: var(--dark); display: block; margin-bottom: 4px;">Inclusive Communication</strong>
+                        <span style="color: var(--gray); font-size: 0.95rem;">Multiple formats for different needs and preferences</span>
+                    </div>
+                </div>
+
+                <a asp-controller="Home" asp-action="Inclusion" class="btn-modern btn-primary-gradient mt-4">
+                    Learn About Inclusion <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="col-lg-6">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                     alt="People working together inclusively"
+                     class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
