@@ -2,11 +2,295 @@
     ViewData["Title"] = "Privacy Policy";
 }
 
-<div class="container py-5">
-    <div class="section-header">
-        <h1>Privacy Policy</h1>
-        <p>Learn how we protect your privacy and data</p>
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-10 mx-auto text-center hero-content">
+                <h1>Privacy <span class="highlight">Policy</span></h1>
+                <p class="lead">
+                    Your privacy matters to us. Learn how we protect your information and respect your rights.
+                </p>
+            </div>
+        </div>
     </div>
+</section>
 
-    <!-- Add your content here -->
-</div>
+<section class="py-5">
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <div class="alert alert-info mb-4">
+                            <i class="fas fa-info-circle me-2"></i>
+                            <strong>Last Updated:</strong> @DateTime.Now.ToString("MMMM dd, yyyy")
+                        </div>
+
+                        <h2 class="mb-4">Our Commitment to Your Privacy</h2>
+                        <p class="mb-4">
+                            At DisabilityAware, we are committed to protecting your privacy and ensuring the security
+                            of your personal information. This Privacy Policy explains how we collect, use, disclose,
+                            and safeguard your information when you visit our website.
+                        </p>
+
+                        <div class="privacy-section mb-5">
+                            <h3 class="mb-3"><i class="fas fa-user-shield text-primary me-2"></i> Information We Collect</h3>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="p-3 border rounded">
+                                        <h5 class="text-primary">Information You Provide</h5>
+                                        <ul class="mt-3">
+                                            <li>Name and contact information</li>
+                                            <li>Email address for newsletter subscription</li>
+                                            <li>Inquiries and feedback</li>
+                                            <li>Service requests</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 border rounded">
+                                        <h5 class="text-primary">Automatically Collected</h5>
+                                        <ul class="mt-3">
+                                            <li>Browser type and version</li>
+                                            <li>IP address and general location</li>
+                                            <li>Pages visited and time spent</li>
+                                            <li>Accessibility preferences</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="privacy-section mb-5">
+                            <h3 class="mb-3"><i class="fas fa-lock text-primary me-2"></i> How We Use Your Information</h3>
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="text-center p-3">
+                                        <div class="privacy-icon mb-3">
+                                            <i class="fas fa-envelope fa-2x"></i>
+                                        </div>
+                                        <h5>Communication</h5>
+                                        <p>To respond to your inquiries and provide requested information</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-center p-3">
+                                        <div class="privacy-icon mb-3">
+                                            <i class="fas fa-cogs fa-2x"></i>
+                                        </div>
+                                        <h5>Improvement</h5>
+                                        <p>To enhance website accessibility and user experience</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-center p-3">
+                                        <div class="privacy-icon mb-3">
+                                            <i class="fas fa-bell fa-2x"></i>
+                                        </div>
+                                        <h5>Updates</h5>
+                                        <p>To send newsletters and educational materials (with consent)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="privacy-section mb-5">
+                            <h3 class="mb-3"><i class="fas fa-share-alt text-primary me-2"></i> Information Sharing</h3>
+                            <p class="mb-3">We do not sell, trade, or rent your personal information to third parties. We may share information only in the following circumstances:</p>
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>When We Share</th>
+                                            <th>With Whom</th>
+                                            <th>Purpose</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Service Providers</td>
+                                            <td>Trusted partners</td>
+                                            <td>Website hosting and maintenance</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Legal Requirements</td>
+                                            <td>Law enforcement</td>
+                                            <td>When required by law</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Your Consent</td>
+                                            <td>Specified third parties</td>
+                                            <td>When you explicitly consent</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="privacy-section mb-5">
+                            <h3 class="mb-3"><i class="fas fa-cookie text-primary me-2"></i> Cookies & Tracking</h3>
+                            <p class="mb-3">We use cookies and similar technologies to enhance your experience:</p>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="p-3 border rounded h-100">
+                                        <h6 class="text-primary">Essential Cookies</h6>
+                                        <p class="small">Required for website functionality and accessibility features</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-3 border rounded h-100">
+                                        <h6 class="text-primary">Preference Cookies</h6>
+                                        <p class="small">Remember your accessibility settings and preferences</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-3 border rounded h-100">
+                                        <h6 class="text-primary">Analytics Cookies</h6>
+                                        <p class="small">Help us improve website performance and accessibility</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <p class="small text-muted">
+                                    <i class="fas fa-info-circle me-1"></i>
+                                    You can control cookies through your browser settings. Disabling cookies may affect accessibility features.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="privacy-section mb-5">
+                            <h3 class="mb-3"><i class="fas fa-user-check text-primary me-2"></i> Your Rights</h3>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="fas fa-eye text-success mt-1 me-3"></i>
+                                        <div>
+                                            <h5>Right to Access</h5>
+                                            <p class="mb-0">Request a copy of your personal information</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="fas fa-edit text-success mt-1 me-3"></i>
+                                        <div>
+                                            <h5>Right to Correct</h5>
+                                            <p class="mb-0">Update or correct inaccurate information</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="fas fa-trash-alt text-success mt-1 me-3"></i>
+                                        <div>
+                                            <h5>Right to Delete</h5>
+                                            <p class="mb-0">Request deletion of your personal information</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <i class="fas fa-ban text-success mt-1 me-3"></i>
+                                        <div>
+                                            <h5>Right to Opt-Out</h5>
+                                            <p class="mb-0">Unsubscribe from communications at any time</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="privacy-section mb-5">
+                            <h3 class="mb-3"><i class="fas fa-shield-alt text-primary me-2"></i> Data Security</h3>
+                            <p class="mb-3">We implement appropriate security measures to protect your information:</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> SSL encryption for data transmission</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Regular security assessments</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Limited access to personal information</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Secure data storage practices</li>
+                            </ul>
+                        </div>
+
+                        <div class="privacy-section mb-5">
+                            <h3 class="mb-3"><i class="fas fa-child text-primary me-2"></i> Children's Privacy</h3>
+                            <p>
+                                Our website is not directed at children under the age of 13. We do not knowingly
+                                collect personal information from children. If you believe we have collected
+                                information from a child, please contact us immediately.
+                            </p>
+                        </div>
+
+                        <div class="privacy-section">
+                            <h3 class="mb-3"><i class="fas fa-question-circle text-primary me-2"></i> Contact Us</h3>
+                            <div class="alert alert-light">
+                                <p class="mb-2"><strong>For privacy-related inquiries:</strong></p>
+                                <p class="mb-1"><i class="fas fa-envelope me-2"></i> Email: privacy@disabilityaware.org</p>
+                                <p class="mb-0"><i class="fas fa-clock me-2"></i> Response time: Within 5 business days</p>
+                            </div>
+                            <p class="small text-muted mt-3">
+                                This Privacy Policy may be updated periodically. We encourage you to review this page
+                                regularly for any changes. Continued use of our website constitutes acceptance of
+                                the updated Privacy Policy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <a asp-controller="Home" asp-action="Index" class="btn btn-primary px-4">
+                        <i class="fas fa-home me-2"></i>
+                        Return to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .privacy-section {
+        padding: 1.5rem 0;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+        .privacy-section:last-child {
+            border-bottom: none;
+        }
+
+    .privacy-icon {
+        width: 60px;
+        height: 60px;
+        background: rgba(99, 102, 241, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+        margin: 0 auto;
+    }
+
+    .hero-section {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
+
+        .hero-section .highlight {
+            background: linear-gradient(to right, #ffffff, #f0abfc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+    table th {
+        background-color: rgba(99, 102, 241, 0.1) !important;
+        font-weight: 600;
+    }
+
+    .card {
+        border-radius: 20px;
+    }
+
+    @@media (max-width: 768px) {
+        .privacy-section {
+            padding: 1rem 0;
+        }
+    }
+</style>
