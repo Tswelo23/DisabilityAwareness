@@ -1,182 +1,179 @@
-📋 Project Overview
-DisabilityAware is a comprehensive, accessibility-focused educational web application built with ASP.NET Core MVC. The platform provides detailed information about various disabilities, support services, educational resources, and inclusion best practices, all while maintaining strict accessibility standards.
 
-🏗️ Project Architecture
-Technology Stack
-Backend: ASP.NET Core 7.0 MVC
+# ♿ DisabilityAware
 
-Frontend: HTML5, CSS3, JavaScript (ES6+)
+## An Accessibility-First Educational Web Platform
 
-UI Framework: Bootstrap 5.3
+DisabilityAware is a comprehensive, accessibility-focused educational web application built with **ASP.NET Core MVC**. The platform provides clear, structured information on disabilities, support services, educational resources, and inclusion best practices — while strictly adhering to modern accessibility standards (**WCAG 2.1 AA**).
 
-JavaScript Libraries: jQuery 3.6
+---
 
-Icons: Font Awesome 6.4
+## 🌍 Project Purpose
 
-Fonts: Inter + Space Grotesk (Google Fonts)
+The goal of DisabilityAware is to:
 
-Styling: Custom CSS with CSS Variables
+* Promote disability awareness and inclusion
+* Provide accessible, easy-to-understand educational content
+* Support individuals, caregivers, educators, and organisations
+* Demonstrate best-practice accessible web development using ASP.NET Core
 
-Deployment: Local development (IIS Express)
+---
 
+## 🏗️ Project Architecture
 
-🚀 Features & Functionality
-1. Core Accessibility Features
-Accessibility Toolbar (Fixed Position)
-Font Size Adjustment: Increase/Decrease text size (12px to 30px range)
+### 🔧 Technology Stack
 
-High Contrast Mode: Toggle black/white contrast theme
+#### Backend
 
-Text-to-Speech: Full page content reading using Web Speech API
+* ASP.NET Core 7.0 MVC
 
-Stop Speech: Interrupt reading functionality
+#### Frontend
 
-Persistent Settings: User preferences saved in localStorage
+* HTML5
+* CSS3 (Custom CSS + CSS Variables)
+* JavaScript (ES6+)
 
-Navigation Features
-Responsive navigation with Bootstrap 5
+#### UI & Libraries
 
-Active page highlighting
+* Bootstrap 5.3
+* jQuery 3.6
+* Font Awesome 6.4
 
-Sticky navigation with scroll effects
+#### Typography
 
-Smooth scrolling for anchor links
+* Inter (Body text)
+* Space Grotesk (Headings)
 
-Back-to-top button
+---
 
-2. Content Pages
-Home Page (Index.cshtml)
-Hero Section: Gradient background with animations
+## 🚀 Key Features
 
-Educational Cards: 6 disability categories with detailed information
+### ♿ Core Accessibility Features
 
-Statistics Section: Key disability facts with animated cards
+* Accessibility toolbar (fixed position)
+* Font size adjustment (12px – 30px)
+* High-contrast mode (black/white)
+* Text-to-speech using Web Speech API
+* Stop speech functionality
+* Persistent user preferences (localStorage)
 
-Support Section: Inclusion principles with check items
+### ✅ Accessibility Compliance
 
-Responsive Design: Mobile-first approach
+* WCAG 2.1 AA compliant
+* Full keyboard navigation
+* Screen-reader friendly (ARIA + semantic HTML)
+* Minimum colour contrast ratio of 4.5:1
 
-Disability Types Page (Types.cshtml)
-Detailed information about various disabilities
+---
 
-Categorized content with filtering
+## 🧭 Navigation & User Experience
 
-Interactive tables and cards
+* Fully responsive navigation (Bootstrap 5)
+* Active page highlighting
+* Sticky navigation with scroll effects
+* Smooth scrolling for anchor links
+* Back-to-top button
+* Mobile-first responsive design
 
-Resource links and references
+---
 
-Support Services Page (Services.cshtml) - MOST COMPREHENSIVE
-6 Service Categories: Assistive tech, personal support, educational, employment, housing, health
+## 📄 Content Pages
 
-Technology Assessment Tool: Interactive form with recommendations
+### 🏠 Home Page (`Index.cshtml`)
 
-Funding Resources: South African specific grants and assistance
+* Animated hero section
+* Disability education cards (6 categories)
+* Statistics section with animated counters
+* Inclusion principles and support highlights
 
-Service Provider Directory: Extensive table with 150+ links
+---
 
-Interactive Forms: Service requests with modal confirmations
+### 🧠 Disability Types (`Types.cshtml`)
 
-Quick Access Resources: Downloadable materials and tutorials
+* Detailed explanations of disability categories
+* Filterable and structured content
+* Interactive cards and tables
+* External resources and references
 
-Resources Page (Resources.cshtml)
-Educational materials and guides
+---
 
-Downloadable resources
+### 🛠️ Support Services (`Services.cshtml`)
 
-Training calendars
+**Most comprehensive section of the platform**
 
-Search functionality
+#### Service Categories
 
-Inclusion Guide Page (Inclusion.cshtml)
-Best practices for inclusion
+* Assistive Technology
+* Personal Support
+* Educational Services
+* Employment Support
+* Housing Support
+* Health Services
 
-Accessibility guidelines
+#### Additional Features
 
-Community resources
+* Interactive technology assessment tool
+* South African funding and grant resources
+* Service provider directory (150+ links)
+* Interactive service request forms
+* Downloadable tools and guides
 
-Training materials
+---
 
-3. Technical Features
-CSS Architecture (site.css - 5,000+ lines)
-CSS Custom Properties: Comprehensive design system
+### 📚 Resources (`Resources.cshtml`)
 
-Modern Gradients: 4 predefined gradient combinations
+* Educational guides and learning materials
+* Downloadable resources
+* Training calendars
+* Search functionality
 
-Animation System: Keyframes and transitions
+---
 
-Responsive Breakpoints: Mobile-first responsive design
+### 🤝 Inclusion Guide (`Inclusion.cshtml`)
 
-Component-Based Structure: Modular CSS components
+* Inclusion best practices
+* Accessibility guidelines
+* Community and training resources
+* Organisational inclusion strategies
 
-JavaScript Functionality (site.js)
-Accessibility Controls: Font sizing, contrast, speech synthesis
+---
 
-Form Handling: Newsletter subscription, service requests
+## 🚀 Deployment
 
-UI Interactions: Modals, toasts, animations
+* Local development using **IIS Express**
 
-Scroll Management: Intersection Observer for animations
+---
 
-Local Storage: User preference persistence
+## 🛠️ Development Setup
 
-🎨 Design System
-Color Palette (CSS Variables)
-css
-:root {
-    --primary: #6366f1;      /* Indigo */
-    --primary-dark: #4f46e5;
-    --secondary: #8b5cf6;    /* Purple */
-    --accent: #ec4899;       /* Pink */
-    --success: #10b981;      /* Emerald */
-    --warning: #f59e0b;      /* Amber */
-    --danger: #ef4444;       /* Red */
-    --light: #f8fafc;        /* Light gray */
-    --dark: #0f172a;         /* Dark blue */
-    --gray: #64748b;         /* Gray */
-}
-Typography
-Body Font: Inter (300-800 weights)
+### ✅ Prerequisites
 
-Headings: Space Grotesk (400-700 weights)
+* .NET 7.0 SDK or later
+* Visual Studio 2022 or VS Code
+* Node.js (optional – frontend tooling)
+* Modern browser:
 
-Base Size: 16px (adjustable via toolbar)
+  * Chrome 90+
+  * Firefox 88+
+  * Safari 14+
 
-Line Height: 1.7 for optimal readability
+---
 
-Gradient System
---gradient-1: #667eea → #764ba2 (Primary)
+## ▶️ Running the Project
 
---gradient-2: #f093fb → #f5576c (Secondary)
+1. Clone the repository
+2. Open the solution in Visual Studio
+3. Restore NuGet packages
+4. Run the project using **IIS Express**
+5. Navigate to `https://localhost:xxxx`
 
---gradient-3: #4facfe → #00f2fe (Info)
+---
 
---gradient-4: #43e97b → #38f9d7 (Success)
+## 📌 Future Enhancements
 
-⚡ Performance & Optimization
-Frontend Optimization
-CSS Minification: Combined and minified styles
+* Multi-language support
+* User accounts and profiles
+* CMS-driven content management
+* API integration for live service data
+* Automated accessibility testing
 
-JavaScript Optimization: Minified and bundled
 
-Image Optimization: Responsive images with lazy loading
-
-Font Optimization: Local font loading strategy
-
-Accessibility Compliance
-WCAG 2.1 AA: Meets international standards
-
-Keyboard Navigation: Full keyboard support
-
-Screen Reader Compatible: ARIA labels and semantic HTML
-
-Color Contrast: Minimum 4.5:1 ratio maintained
-
-🛠️ Development Setup
-Prerequisites
-.NET 7.0 SDK or later
-
-Visual Studio 2022 or VS Code
-
-Node.js (for optional frontend tooling)
-
-Modern web browser (Chrome 90+, Firefox 88+, Safari 14+
